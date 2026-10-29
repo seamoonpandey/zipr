@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">zipr</string>
+    <string name="tagline">Zip a whole folder into one file. Share one file, not 5,000.</string>
+    <string name="choose_folder">Choose folder</string>
+    <string name="tip">Tip: pick DCIM/Camera for all your photos &amp; videos</string>
+    <string name="filter_all">All</string>
+    <string name="filter_photos">Photos</string>
+    <string name="filter_videos">Videos</string>
+    <string name="select_all">Select all</string>
+    <string name="scanning">Scanning… %1$s files</string>
+    <string name="summary">%1$s selected · %2$s</string>
+    <string name="zip_n">Zip %1$s files</string>
+    <string name="zipping">Zipping…</string>
+    <string name="progress">%1$s / %2$s files · %3$s / %4$s</string>
+    <string name="cancel">Cancel</string>
+    <string name="done">Done · %1$s files · %2$s</string>
+    <string name="skipped">%1$s files could not be read and were skipped.</string>
+    <string name="share">Share</string>
+    <string name="zip_another">Zip another folder</string>
+    <string name="error">Zipping failed: %1$s</string>
+    <string name="no_picker">No file picker found on this device.</string>
+</resources>

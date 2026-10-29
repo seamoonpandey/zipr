@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 1. Empty -->
+    <LinearLayout
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/accent"
+            android:textSize="56sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:text="@string/tagline"
+            android:textAppearance="?android:textAppearanceMedium" />
+        <Button
+            android:id="@+id/chooseButton"
+            style="@style/BigButton"
+            android:text="@string/choose_folder" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/tip"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- 2. Folder loaded -->
+    <LinearLayout
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/folderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="middle"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="20dp"
+            android:singleLine="true"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <RadioGroup
+            android:id="@+id/filters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="12dp">
+            <RadioButton android:id="@+id/filterAll" style="@style/Chip" android:checked="true" android:text="@string/filter_all" />
+            <RadioButton android:id="@+id/filterPhotos" style="@style/Chip" android:text="@string/filter_photos" />
+            <RadioButton android:id="@+id/filterVideos" style="@style/Chip" android:text="@string/filter_videos" />
+        </RadioGroup>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="56dp"
+            android:paddingHorizontal="12dp">
+            <CheckBox
+                android:id="@+id/selectAll"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:checked="true"
+                android:text="@string/select_all"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/summary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:paddingEnd="8dp"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:scrollbars="vertical" />
+        <Button
+            android:id="@+id/zipButton"
+            style="@style/BigButton"
+            android:layout_margin="16dp" />
+    </LinearLayout>
+
+    <!-- 3. Zipping / 4. Done -->
+    <LinearLayout
+        android:id="@+id/workView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/workTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@android:style/Widget.Material.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:max="1000" />
+        <TextView
+            android:id="@+id/workDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="16sp" />
+        <Button
+            android:id="@+id/primaryButton"
+            style="@style/BigButton" />
+        <Button
+            android:id="@+id/secondaryButton"
+            style="@style/FlatButton"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+</FrameLayout>

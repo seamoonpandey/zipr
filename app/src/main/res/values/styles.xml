@@ -1,0 +1,27 @@
+<resources>
+    <!-- Button.Colored is API 23+; tint the plain Material button instead. -->
+    <style name="BigButton" parent="android:Widget.Material.Button">
+        <item name="android:backgroundTint">@color/button_bg</item>
+        <item name="android:textColor">@color/button_text</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="FlatButton" parent="android:Widget.Material.Button.Borderless.Colored">
+        <item name="android:minHeight">56dp</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="Chip">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:background">@drawable/chip</item>
+    </style>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <!-- 23+ can draw dark status bar icons, so match the background. -->
+    <style name="AppTheme" parent="BaseTheme">
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>
